@@ -1,8 +1,9 @@
-h2{
+h1{
     font-size: 20px;
     font-weight: 600;
     font-family: Mplus 1p;
     margin: 5px;
+    text-align: right;
 }
 
 header{
@@ -20,7 +21,7 @@ header{
     height: 38px;
 }
 
-#menu{
+.menu{
     height: 20px;
     display: flex;
     flex-direction: column;
@@ -33,7 +34,7 @@ header{
     background-color: #0A8EAE;
 }
 
-#id{
+.class{
     position: relative;/*囲んでいる親要素にrelative*/
 }
 
