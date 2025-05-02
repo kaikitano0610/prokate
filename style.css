@@ -88,8 +88,8 @@ main{
 
 .btn{
     background-color: #FFD000;
-    width: 15em;
-    height: 2em;
+    width: 18em;
+    height: 3em;
     border-radius: 2em;
     display: flex;
     align-items: center;
@@ -121,12 +121,15 @@ main{
     margin: 20px auto;
 }
 
+.what{
+    margin: 40px 0px;
+}
 .title img{
     height: 38px;
     width: auto;
 }
 
-.title p{
+.title h2{
     color: #0A8EAE;
     font-weight: 800;
     font-size: 22px;
@@ -154,6 +157,7 @@ main{
     max-width: 88%;
     margin: 20px auto;
     font-size: 16px;
+    line-height: 30px;
 }
 
 .ai{
@@ -186,7 +190,7 @@ main{
     background-color: white;
     border-radius: 1em;
     max-width: 93%;
-    margin: 0px auto;
+    margin: 40px auto;
     padding: 1em;
 }
 
@@ -208,17 +212,67 @@ main{
 }
 
 .programing{
-    max-width: 90%;
-    margin: 20px auto;
+    max-width: 100%;
 
 }
 .programing h3{
     margin: 0px auto;
     border-bottom: 2px solid #FFD000;
     max-width: 14em;
+    margin-bottom: 20px;
 }
 
 .programing span{
     background-color: #ffe56f;
     padding: 0px 0.2em;
+}
+
+.reason h3{
+    text-align: center;
+}
+
+.reason img{
+    display: block;
+    margin: 0px auto;
+}
+
+.num{
+    text-align: center;
+    color: #FFD000;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.reason a{
+    display: block;
+    text-align: right;
+    max-width: 95%;
+}
+
+.reason-group{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.click{
+    background-color: #43C038;
+    padding: 5px 0px;
+}
+
+.arrow{
+    background-color: white;
+    font-size: 18px;
+    color: #43C038;
+    font-weight: 500;
+    max-width: 5.3em;
+    padding-left: 0.3em;
+}
+
+.arrow::after{
+    display: inline-block;
+    content: "";
+    background-image: url(/img/矢印1.png);
+    height: 30px;
+    width: 83px;
 }
