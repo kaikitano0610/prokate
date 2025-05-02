@@ -268,11 +268,25 @@ main{
     max-width: 5.3em;
     padding-left: 0.3em;
 }
+.white{
+    height: 0;
+}
 
-.arrow::after{
+.white::after{
     display: inline-block;
     content: "";
     background-image: url(/img/矢印1.png);
-    height: 30px;
-    width: 83px;
+    height: 34px;
+    width: 85px;
+    position: relative;
+    top: -46.5px;
+    left: 88.3px;
+}
+
+.online{
+    color: #FFF641;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: end;
+    
 }
