@@ -257,7 +257,7 @@ main{
 
 .click{
     background-color: #43C038;
-    padding: 5px 0px;
+    padding-top: 5px;
 }
 
 .arrow{
@@ -288,5 +288,68 @@ main{
     font-size: 35px;
     font-weight: 600;
     text-align: end;
+    margin-bottom: 0px;
+    margin-right: 8px;
     
+}
+
+.contents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.contents p{
+    color: white;
+    font-size: 25px;
+    line-height: 10px;
+    font-weight: 500;
+}
+
+.contents img{
+    max-width: 30%;
+    height: 100%;
+}
+
+.buttom img{
+    height: 40px;
+}
+.buttom{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 0;
+}
+
+
+
+.btn2{
+    background-color: #2D9823;
+    border-radius: 2em;
+    
+}
+
+.arrow2{
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+    padding: 1px 1rem;
+}
+
+.arrow2 span{
+    color: #FFF641;
+}
+
+.arrow2::after{
+    display: inline-block;
+    background-image: url(/img/緑矢印.png);
+    content: "";
+    width: 27px;
+    height: 27px;
+    position: relative;
+    top: 5px;
+    left: 3px;
 }
