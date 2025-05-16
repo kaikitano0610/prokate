@@ -567,3 +567,7 @@ main{
 .qu.open::after {
     content: '－';
 }
+
+a.line{
+    text-decoration: nones;
+}
