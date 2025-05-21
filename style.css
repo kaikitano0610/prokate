@@ -490,3 +490,84 @@ main{
     gap: 15px;
     padding: 10px 0;
 }
+.faq{
+    margin: 40px 10px;
+}
+
+.faq h2{
+    text-align: center;
+}
+
+.qa-group{
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.qu{
+    margin: 0;
+    padding: 0.5rem 2rem;
+    text-align: left;
+}
+
+.qu::before{
+    content: 'Q';
+    color: #0A8EAE;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    right: 1rem;
+}
+
+.qu::after{
+    content: '+';
+    color: #0A8EAE;
+    font-weight: 600;
+    font-size: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%); /* 中央揃え */
+}
+
+.question{
+    border: 1.5px solid #0A8EAE;
+    border-radius: 0.5rem;
+    background-color: white;
+    position: relative;
+    top: 10px;
+}
+
+.answer{
+    border: 1.5px solid #0A8EAE;
+    background-color: #E3FAFF;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    display: none;
+}
+.an::before{
+    content: 'A';
+    color: #0A8EAE;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    right: 1rem;
+}
+
+.an{
+    margin: 0;
+    padding-left: 2rem;
+    padding-right:2rem;
+    text-align: left;
+}
+
+.qu.open::after {
+    content: '－';
+}
+
+a.line{
+    text-decoration: nones;
+}
