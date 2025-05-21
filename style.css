@@ -253,6 +253,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-bottom:45px;
 }
 
 .click{
@@ -426,7 +427,8 @@ main{
 }
 
 .course{
-    margin: 50px auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .course h3{
@@ -458,4 +460,33 @@ main{
 
 .center{
     text-align: center;
+}
+
+.starting-support{
+    background: linear-gradient(0deg, transparent 19px, #B3F0FF 20px), linear-gradient(90deg,  transparent 19px, #B3F0FF 20px);
+    background-size: 20px 20px;
+    padding: 30px 10px;
+    height: 100%;
+}
+
+.starting-support img{
+    max-width: 60%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+}
+
+.point{
+    text-align: center;
+}
+
+.point h3{
+    background: linear-gradient(transparent 50%, #FFF641 50%);
+}
+
+.point-group{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
 }
