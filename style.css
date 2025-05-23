@@ -29,12 +29,17 @@ header{
     align-items: center;
     padding: 0 10px;
     box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-    position: relative;
-    z-index: 10;
+    position: fixed; /* Changed to fixed to keep header visible on scroll */
+    width: 100%; /* Ensure it spans full width when fixed */
+    top: 0;
+    left: 0;
+    background-color: white; /* Ensure header has a background */
+    z-index: 100; /* Increased z-index to ensure it's on top */
 }
 
 .logo{
     height: 38px;
+    z-index: 101; /* Ensure logo is above the nav menu */
 }
 
 .menu{
@@ -42,16 +47,87 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    cursor: pointer;
+    z-index: 101; /* Ensure hamburger is above the nav menu */
 }
 
 .ham{
     height: 2px;
     width: 26px;
     background-color: #0A8EAE;
+    transition: all 0.3s ease;
 }
 
+/* Styles for the navigation menu */
+.nav-menu {
+    position: fixed; /* Changed to fixed to cover content below */
+    top: 60px; /* Position below the fixed header */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px); /* Take full viewport height minus header height */
+    background-color: #f8f8f8;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 99; /* Below the header, but above other content */
+    overflow-y: auto; /* Enable scrolling for long menus */
+}
+
+.nav-menu.active {
+    transform: translateY(0);
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-menu li:last-child {
+    border-bottom: none;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #0A8EAE;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-menu a:hover {
+    background-color: #e3faff;
+}
+
+/* Hamburger menu animation */
+.menu.open .ham:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+}
+
+.menu.open .ham:nth-child(2) {
+    opacity: 0;
+}
+
+.menu.open .ham:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+}
+
+
+/* Adjustments for main content to avoid being hidden under fixed header */
+main{    
+    margin: 0px auto;
+    padding-top: 60px; /* Add padding to push content below fixed header */
+}
+
+
 .hero{
-    position: relative; /*囲んでいる親要素にrelative*/
+    position: relative;
     width: 100%;
     display:block;
     max-width: 600px;
@@ -65,7 +141,7 @@ header{
 }
 
 .top_meg{
-    position: absolute;/*一番上にしたい子要素にabsolute*/
+    position: absolute;
     bottom: 5%;
     background-color: #ffffff80;
     right: 3%;
@@ -73,10 +149,6 @@ header{
     padding: 0.5em;
     max-width: 95%; 
     word-break: break-word;
-}
-
-main{    
-    margin: 0px auto;
 }
 
 .guid{
@@ -247,6 +319,7 @@ main{
     display: block;
     text-align: right;
     max-width: 95%;
+    color: #0A8EAE;
 }
 
 .reason-group{
@@ -569,5 +642,5 @@ main{
 }
 
 a.line{
-    text-decoration: nones;
+    text-decoration: none; /* Corrected typo from 'nones' to 'none' */
 }
