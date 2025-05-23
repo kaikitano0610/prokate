@@ -13,11 +13,21 @@
 <body>
     <header>
         <img class="logo" src="./img/logo.png" alt="logo">
-        <div class="menu">
+        <div class="menu" id="hamburger-menu">
             <div class="ham"></div>
             <div class="ham"></div>
             <div class="ham"></div>
         </div>
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="#what">プロカテとは</a></li>
+                <li><a href="#why-choose-us">選ばれる理由</a></li>
+                <li><a href="#course-introduction">コース紹介</a></li>
+                <li><a href="#starting-support">サポート</a></li>
+                <li><a href="#faq">よくあるご質問</a></li>
+                <li><a href="https://lin.ee/mrAVI6p">無料体験</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section class="top">
@@ -32,10 +42,10 @@
             <div class="guid">
                 <p class="">\まずは無料体験/</p>
                 <div class="btn">
-                    <a href="#">お申し込みはこちら</a>
+                    <a href="https://lin.ee/mrAVI6p">お申し込みはこちら</a>
                 </div>
             </div> 
-            <div class="what">
+            <div class="what" id="what">
                 <div class="title">
                     <img src="/img/logo.png" alt="プロカテ 長崎プログラミング家庭教師">
                     <h2>とは</h2>
@@ -87,7 +97,7 @@
                 </div>
             </div>          
         </section>
-        <section class="why-choose-us">
+        <section class="why-choose-us" id="why-choose-us">
             <div class="title">
                 <img src="/img/logo.png" alt="logo">
                 <h2>が選ばれる理由</h2>
@@ -109,7 +119,7 @@
                     <p class="text">
                         Scratchで主にゲーム作成をしながら、プログラミング学習を進めていきます。遊びのような感覚で、スキルだけでなく論理的思考力なども身に付けることができます。
                     </p>
-                    <a href="#">※コースの詳細はこちら</a>
+                    <a href="#course-introduction">※コースの詳細はこちら</a>
                 </div>
                 <div class="reason">
                     <p class="num">03.</p>
@@ -126,7 +136,7 @@
                     <p class="text">
                         基礎をしっかり学んだ後は、より本格的なゲーム開発に挑戦できるUnityへのステップアップもサポート。お子様の成長に合わせて、無理なくスキルアップを目指せます。
                     </p>
-                    <a href="#">※コースの詳細はこちら</a>
+                    <a href="#course-introduction">※コースの詳細はこちら</a>
                 </div>
             </div>
             <a class="line" href="https://lin.ee/mrAVI6p">
@@ -146,13 +156,13 @@
                     <div class="buttom">
                         <img src="/img/logo.png" alt="">
                         <div class="btn2">
-                            <a class="arrow2" href="#"><span>無料体験</span>受付中</a>
+                            <a class="arrow2" href="https://lin.ee/mrAVI6p"><span>無料体験</span>受付中</a>
                         </div>
                     </div>
             </a>
             </div>
         </section>
-        <section class="course-introduction">
+        <section class="course-introduction" id="course-introduction">
             <h2 class="title2">コース紹介</h2>
             <p class="green">\プログラミング未経験者はまずこれから/</p>
             <img class="puzzle" src="/img/scratch.png" alt="scratch">
@@ -223,7 +233,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Unity -->
             <img class="puzzle" src="/img/Unity.png" alt="Unity">
             <h3 class="center">Unity</h3>
             <p class="text">Unity（ユニティ）は、ゲームやアプリを作るための開発ツールです。世界中でたくさんのゲームクリエイターが使っていて、
@@ -296,7 +305,7 @@
                 </div>
             </div>
         </section>
-        <section class="starting-support">
+        <section class="starting-support" id="starting-support">
             <h2>スタートダッシュを手厚くサポート</h2>
             <img src="/img/仮.jpg" alt="">
             <div class="point-group">
@@ -340,12 +349,12 @@
                 <div class="buttom">
                     <img src="/img/logo.png" alt="">
                     <div class="btn2">
-                        <a class="arrow2" href="#"><span>無料体験</span>受付中</a>
+                        <a class="arrow2" href="https://lin.ee/mrAVI6p"><span>無料体験</span>受付中</a>
                     </div>
                 </div>
             </div>
         </a>
-        <section class="faq">
+        <section class="faq" id="faq">
             <h2>よくあるご質問</h2>
             <div class="qa-group">
                 <div class="qa">
@@ -357,7 +366,9 @@
                 <div class="qa">
                     <div class="question qu">保護者は同伴ですか？</div>
                     <div class="answer">
-                        <p class="an"> 最初の一ヶ月は、スタッフがご自宅にお伺いし、パソコン環境の構築や学習の進め方などを丁寧にサポートいたします。お子様が一人で安心して学習できるようになるまで、しっかりとお手伝いさせていただきます。2ヶ月目からは、完全オンラインでの授業となりますので、基本的にはお子様お一人でご参加いただけます。</p>
+                        <p class="an">
+                            最初の一ヶ月は、スタッフがご自宅にお伺いし、パソコン環境の構築や学習の進め方などを丁寧にサポートいたします。2ヶ月目からは、完全オンラインでの授業となりますので、基本的にはお子様お一人でご参加いただけます。（最初からオンラインでの受講希望も対応いたします）
+                        </p>
                     </div>
                 </div>
                 <div class="qa">
