@@ -2,9 +2,22 @@ const questions = document.querySelectorAll('.question');
 
 questions.forEach((question) => {
   question.addEventListener('click', () => {
-    const answer = question.nextElementSibling;
-    answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+    const answer = question.nextElementSibling; // `.answer` 要素を取得
+
+    // `.answer` に `.active` クラスをトグルする
+    answer.classList.toggle('active');
+
+    // `.question` に `.open` クラスをトグルする (アイコン変更用)
     question.classList.toggle('open');
+
+    // オプション: 他のFAQを閉じる機能（任意で追加）
+    // すべての質問をループして、クリックされた質問以外のアコーディオンを閉じる場合
+    questions.forEach((otherQuestion) => {
+      if (otherQuestion !== question) {
+        otherQuestion.classList.remove('open');
+        otherQuestion.nextElementSibling.classList.remove('active');
+      }
+    });
   });
 });
 

@@ -2,567 +2,583 @@
     font-family: "M PLUS 1p", sans-serif;
 }
 
-h1{
-    font-size: 18px;
-    font-family: "M PLUS 1p", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    margin: 5px;
-    text-align: right;
-}
-
-h2{
-    font-size: 20px;
-    font-weight: 600;
-    color: #0A8EAE;
-}
-
-h3{
-    font-size: 18px;
-    font-weight: 600;
-}
-
-header{
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-    position: fixed; /* Changed to fixed to keep header visible on scroll */
-    width: 100%; /* Ensure it spans full width when fixed */
-    top: 0;
-    left: 0;
-    background-color: white; /* Ensure header has a background */
-    z-index: 100; /* Increased z-index to ensure it's on top */
-}
-
-.logo{
-    height: 38px;
-    z-index: 101; /* Ensure logo is above the nav menu */
-}
-
-.menu{
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    cursor: pointer;
-    z-index: 101; /* Ensure hamburger is above the nav menu */
-}
-
-.ham{
-    height: 2px;
-    width: 26px;
-    background-color: #0A8EAE;
-    transition: all 0.3s ease;
-}
-
-/* Styles for the navigation menu */
-.nav-menu {
-    position: fixed; /* Changed to fixed to cover content below */
-    top: 60px; /* Position below the fixed header */
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 60px); /* Take full viewport height minus header height */
-    background-color: #f8f8f8;
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 99; /* Below the header, but above other content */
-    overflow-y: auto; /* Enable scrolling for long menus */
-}
-
-.nav-menu.active {
-    transform: translateY(0);
-}
-
-.nav-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-menu li {
-    text-align: center;
-    border-bottom: 1px solid #eee;
-}
-
-.nav-menu li:last-child {
-    border-bottom: none;
-}
-
-.nav-menu a {
-    display: block;
-    padding: 15px 0;
-    text-decoration: none;
-    color: #0A8EAE;
-    font-weight: 500;
-    font-size: 16px;
-}
-
-.nav-menu a:hover {
-    background-color: #e3faff;
-}
-
-/* Hamburger menu animation */
-.menu.open .ham:nth-child(1) {
-    transform: translateY(6.5px) rotate(45deg);
-}
-
-.menu.open .ham:nth-child(2) {
-    opacity: 0;
-}
-
-.menu.open .ham:nth-child(3) {
-    transform: translateY(-6.5px) rotate(-45deg);
-}
-
-
-/* Adjustments for main content to avoid being hidden under fixed header */
-main{    
-    margin: 0px auto;
-    padding-top: 60px; /* Add padding to push content below fixed header */
-}
-
-
-.hero{
-    position: relative;
-    width: 100%;
-    display:block;
-    max-width: 600px;
-    margin: 0px auto;   
-}
-
-.hero_img{
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.top_meg{
-    position: absolute;
-    bottom: 5%;
-    background-color: #ffffff80;
-    right: 3%;
-    border-radius: 5%;
-    padding: 0.5em;
-    max-width: 95%; 
-    word-break: break-word;
-}
-
-.guid{
-    text-align: center;
-    margin-top: 30px ;
-    margin-bottom: 40px;
-    
-}
-
-.btn{
-    background-color: #FFD000;
-    width: 18em;
-    height: 3em;
-    border-radius: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px auto;
-}
-
-.guid p{
-    color: #0A8EAE;
-    margin-bottom: 0px;
-    font-weight: 400;
-}
-
-.btn a{
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-}
-
-.btn:hover{
-    background-color: #ffe56f;
-}
-
-.title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2.5em;
-    margin: 20px auto;
-}
-
-.what{
-    margin: 40px 0px;
-}
-.title img{
-    height: 38px;
-    width: auto;
-}
-
-.title h2{
-    color: #0A8EAE;
-    font-weight: 800;
-    font-size: 22px;
-}
-
-.summary{
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 0.5em;
-    margin: 20px auto;
-}
-
-.under{
-    border-bottom: 1.5px solid black;
-}
-
-.illustration{
-    margin-top:30px;
-    display: flex;
-    justify-content: center;
-}
-
-.text{
-    max-width: 88%;
-    margin: 20px auto;
-    font-size: 16px;
-    line-height: 30px;
-}
-
-.ai{
-    background-color: #E3FAFF;
-    padding: 20px 0px;
-    margin: 20px 0px;
-}
-.ai{
-    text-align:center;
-}
-
-.check::before{
-    content: "";
-    display: inline-block;
-    background-image: url(/img/チェックボックス.png);
-    width: 20px;
-    height: 20px;
-    position: relative;
-    top: 7px;
-
-}
-
-.check{
-    margin: 20px auto;
-    text-align: left;
-    max-width: 85%;
-}
-
-.anxiety{
-    background-color: white;
-    border-radius: 1em;
-    max-width: 93%;
-    margin: 40px auto;
-    padding: 1em;
-}
-
-.anxiety-title{
-    margin: 0px auto;
-    background-color:#636363 ;
-    max-width: 80%;
-    border-radius: 1em;
-    height: 2.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.anxiety-title p{
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.programing{
-    max-width: 100%;
-
-}
-.programing h3{
-    margin: 0px auto;
-    border-bottom: 2px solid #FFD000;
-    max-width: 14em;
-    margin-bottom: 20px;
-}
-
-.programing span{
-    background-color: #ffe56f;
-    padding: 0px 0.2em;
-}
-
-.reason h3{
-    text-align: center;
-}
-
-.reason img{
-    display: block;
-    margin: 0px auto;
-}
-
-.num{
-    text-align: center;
-    color: #FFD000;
-    font-weight: 900;
-    font-size: 30px;
-}
-
-.reason a{
-    display: block;
-    text-align: right;
-    max-width: 95%;
-    color: #0A8EAE;
-}
-
-.reason-group{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-bottom:45px;
-}
-
-.click{
-    background-color: #43C038;
-    padding-top: 5px;
-}
-
-.arrow{
-    background-color: white;
-    font-size: 18px;
-    color: #43C038;
-    font-weight: 500;
-    max-width: 5.3em;
-    padding-left: 0.3em;
-}
-.white{
-    height: 0;
-}
-
-.white::after{
-    display: inline-block;
-    content: "";
-    background-image: url(/img/矢印1.png);
-    height: 34px;
-    width: 85px;
-    position: relative;
-    top: -46.5px;
-    left: 88.3px;
-}
-
-.online{
-    color: #FFF641;
-    font-size: 35px;
-    font-weight: 600;
-    text-align: end;
-    margin-bottom: 0px;
-    margin-right: 8px;
-    
-}
-
-.contents{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-
-}
-
-.contents p{
-    color: white;
-    font-size: 25px;
-    line-height: 10px;
-    font-weight: 500;
-}
-
-.contents img{
-    max-width: 30%;
-    height: 100%;
-}
-
-.buttom img{
-    height: 40px;
-}
-.buttom{
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 5px 0;
-}
-
-
-
-.btn2{
-    background-color: #2D9823;
-    border-radius: 2em;
-    
-}
-
-.arrow2{
-    text-decoration: none;
-    color: white;
-    font-size: 21px;
-    padding: 1px 1rem;
-}
-
-.arrow2 span{
-    color: #FFF641;
-}
-
-.arrow2::after{
-    display: inline-block;
-    background-image: url(/img/緑矢印.png);
-    content: "";
-    width: 27px;
-    height: 27px;
-    position: relative;
-    top: 5px;
-    left: 3px;
-}
-
-.course-introduction{
-    background-color: #E3FAFF;
-}
-
-.title2{
-    text-align: center;
-    margin-top: 0 ;
-    padding-top: 50px;
-}
-
-.title2::before{
-    content: '';
-    width: 3rem;
-    height: 0.2rem;
-    background-color: #0A8EAE;
-    display: inline-block;
-    position: relative;
-    bottom: 0.4rem;
-    right: 1rem
-}
-
-.title2::after{
-    content: '';
-    width: 3rem;
-    height: 0.2rem;
-    background-color: #0A8EAE;
-    display: inline-block;
-    position: relative;
-    bottom: 0.4rem;
-    left: 1rem;
-}
-
-.green{
-    text-align: center;
-    color:#2D9823 ;
-}
-
-.puzzle{
-    display: block;
-    margin: 10px auto;
-}
-
-.title3{
-    color: white;
-    background-color: #0A8EAE;
-    width: 13rem;
-    text-align: center;
-    margin: 0 auto;
-    border-radius: 2rem;
-    padding: 5px 0;
-    position: relative;
-    top: 20px;
-}
-
-.border{
-    padding: 30px 10px;
-    border: 2px solid #0A8EAE;
-    border-radius: 2rem;
-    background-color: white;
-    margin: 0 20px;
-    
-}
-.table{
-    display: grid;
-    grid-template-columns:3fr 7fr ;
-}
-.cell1{
-    margin: auto;
-
-}
-
-.course{
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.course h3{
-    text-align: center;
-}
-
-.table2{
-    display: grid;
-    grid-template-rows: repeat(6,1fr);
-    margin: 10px;
-    padding-bottom: 40px;
-}
-
-.etc{
-    text-align: end;
-    margin: 0 10px;
-}
-
-.cell3{
-    background-color: #DCDCDC;
-    padding: 0 10px;
-    font-weight: 500;
-}
-.cell4{
-    background-color: white;
-    padding: 0 10px;
-    margin-top: 1px;
-}
-
-.center{
-    text-align: center;
-}
-
-.starting-support{
-    background: linear-gradient(0deg, transparent 19px, #B3F0FF 20px), linear-gradient(90deg,  transparent 19px, #B3F0FF 20px);
-    background-size: 20px 20px;
-    padding: 30px 10px;
-    height: 100%;
-}
-
-.starting-support img{
-    max-width: 60%;
-    display: block;
-    margin: 20px auto;
-    border-radius: 50%;
-}
-
-.point{
-    text-align: center;
-}
-
-.point h3{
-    background: linear-gradient(transparent 50%, #FFF641 50%);
-}
-
-.point-group{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 10px 0;
-}
+
+@media screen and (max-width: 767px) {
+
+    .sm-only {
+        display: block; 
+    }
+    .lg-only {
+        display: none; 
+    }
+
+    h1{
+        font-size: 18px;
+        font-family: "M PLUS 1p", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        margin: 5px;
+        text-align: right;
+    }
+
+    h2{
+        font-size: 20px;
+        font-weight: 600;
+        color: #0A8EAE;
+    }
+
+    h3{
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    header{
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+        position: fixed; /* Changed to fixed to keep header visible on scroll */
+        width: 100%; /* Ensure it spans full width when fixed */
+        top: 0;
+        left: 0;
+        background-color: white; /* Ensure header has a background */
+        z-index: 100; /* Increased z-index to ensure it's on top */
+    }
+
+    .logo{
+        height: 38px;
+        z-index: 101; /* Ensure logo is above the nav menu */
+    }
+
+    .menu{
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        z-index: 101; /* Ensure hamburger is above the nav menu */
+    }
+
+    .ham{
+        height: 2px;
+        width: 26px;
+        background-color: #0A8EAE;
+        transition: all 0.3s ease;
+    }
+
+    /* Styles for the navigation menu */
+    .nav-menu {
+        position: fixed; /* Changed to fixed to cover content below */
+        top: 60px; /* Position below the fixed header */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 60px); /* Take full viewport height minus header height */
+        background-color: #f8f8f8;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 99; /* Below the header, but above other content */
+        overflow-y: auto; /* Enable scrolling for long menus */
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+    }
+
+    .nav-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-menu li {
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 15px 0;
+        text-decoration: none;
+        color: #0A8EAE;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .nav-menu a:hover {
+        background-color: #e3faff;
+    }
+
+    /* Hamburger menu animation */
+    .menu.open .ham:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
+    }
+
+    .menu.open .ham:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.open .ham:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+
+    /* Adjustments for main content to avoid being hidden under fixed header */
+    main{    
+        margin: 0px auto;
+        padding-top: 60px; /* Add padding to push content below fixed header */
+    }
+
+    .hero_img-lg{
+        display: none; /* Hide large image on mobile */
+    }
+
+    .hero{
+        position: relative;
+        width: 100%;
+        display:block;
+        max-width: 600px;
+        margin: 0px auto;   
+    }
+
+    .hero_img-sm{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .top_meg{
+        position: absolute;
+        bottom: 5%;
+        right: 3%;
+        background-color: #ffffff80;
+        border-radius: 5%;
+        word-break: break-word;
+        padding: 0.5em;
+        max-width: 95%; 
+    }
+
+    .guid{
+        text-align: center;
+        margin: 50px 0 10px 0;
+    }
+
+    .btn{
+        background-color: #FFD000;
+        width: 18em;
+        height: 3em;
+        border-radius: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px auto;
+    }
+
+    .guid p{
+        color: #0A8EAE;
+        margin-bottom: 0px;
+        font-weight: 400;
+    }
+
+    .btn a{
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+    }
+
+    .btn:hover{
+        background-color: #ffe56f;
+    }
+
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.5em;
+        margin-bottom: 20px;
+        padding-top: 80px;
+    }
+
+    .what{
+        margin: 40px 0px;
+    }
+    .title img{
+        height: 38px;
+        width: auto;
+    }
+
+    .title h2{
+        color: #0A8EAE;
+        font-weight: 800;
+        font-size: 22px;
+    }
+
+    .summary{
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 0.5em;
+        margin: 50px auto;
+    }
+
+    .under{
+        border-bottom: 1.5px solid black;
+    }
+
+    .illustration{
+        margin-top:30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .text{
+        max-width: 88%;
+        margin: 20px auto;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .ai{
+        background-color: #E3FAFF;
+        padding: 20px 0px;
+        margin: 20px 0px;
+    }
+    .ai{
+        text-align:center;
+    }
+
+    .check::before{
+        content: "";
+        display: inline-block;
+        background-image: url(/img/チェックボックス.png);
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 7px;
+
+    }
+
+    .check{
+        margin: 20px auto;
+        text-align: left;
+        max-width: 85%;
+    }
+
+    .anxiety{
+        background-color: white;
+        border-radius: 1em;
+        max-width: 93%;
+        margin: 40px auto;
+        padding: 1em;
+    }
+
+    .anxiety-title{
+        margin: 0px auto;
+        background-color:#636363 ;
+        max-width: 80%;
+        border-radius: 1em;
+        height: 2.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .anxiety-title p{
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .programing{
+        max-width: 100%;
+
+    }
+    .programing h3{
+        margin: 0px auto;
+        border-bottom: 2px solid #FFD000;
+        max-width: 14em;
+        margin-bottom: 20px;
+    }
+
+    .programing span{
+        background-color: #ffe56f;
+        padding: 0px 0.2em;
+    }
+
+    .reason h3{
+        text-align: center;
+    }
+
+    .reason img{
+        display: block;
+        margin: 0px auto;
+    }
+
+    .num{
+        text-align: center;
+        color: #FFD000;
+        font-weight: 900;
+        font-size: 30px;
+    }
+
+    .reason a{
+        display: block;
+        text-align: right;
+        max-width: 95%;
+        color: #0A8EAE;
+    }
+
+    .reason-group{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom:45px;
+    }
+
+    .click{
+        background-color: #43C038;
+        padding-top: 5px;
+    }
+
+    .arrow{
+        background-color: white;
+        font-size: 18px;
+        color: #43C038;
+        font-weight: 500;
+        max-width: 5.3em;
+        padding-left: 0.3em;
+    }
+    .white{
+        height: 0;
+    }
+
+    .white::after{
+        display: inline-block;
+        content: "";
+        background-image: url(/img/矢印1.png);
+        height: 34px;
+        width: 85px;
+        position: relative;
+        top: -46.5px;
+        left: 88.3px;
+    }
+
+    .online-sm{
+        color: #FFF641;
+        font-size: 35px;
+        font-weight: 600;
+        text-align: end;
+        margin-bottom: 0px;
+        margin-right: 8px;
+        
+    }
+
+    .online-lg {
+        display: none;
+    }
+
+    .contents{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    .contents p{
+        color: white;
+        font-size: 25px;
+        line-height: 10px;
+        font-weight: 500;
+    }
+
+    .contents img{
+        max-width: 30%;
+        height: 100%;
+    }
+
+    .buttom img{
+        height: 40px;
+    }
+    .buttom{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5px 0;
+    }
+
+    .btn2{
+        background-color: #2D9823;
+        border-radius: 2em;
+        
+    }
+
+    .arrow2{
+        text-decoration: none;
+        color: white;
+        font-size: 21px;
+        padding: 1px 1rem;
+    }
+
+    .arrow2 span{
+        color: #FFF641;
+    }
+
+    .arrow2::after{
+        display: inline-block;
+        background-image: url(/img/緑矢印.png);
+        content: "";
+        width: 27px;
+        height: 27px;
+        position: relative;
+        top: 5px;
+        left: 3px;
+    }
+
+    .course-introduction{
+        background-color: #E3FAFF;
+    }
+
+    .title2{
+        text-align: center;
+        margin-top: 0 ;
+        padding-top: 70px;
+    }
+
+    .title2::before{
+        content: '';
+        width: 3rem;
+        height: 0.2rem;
+        background-color: #0A8EAE;
+        display: inline-block;
+        position: relative;
+        bottom: 0.4rem;
+        right: 1rem
+    }
+
+    .title2::after{
+        content: '';
+        width: 3rem;
+        height: 0.2rem;
+        background-color: #0A8EAE;
+        display: inline-block;
+        position: relative;
+        bottom: 0.4rem;
+        left: 1rem;
+    }
+
+    .green{
+        text-align: center;
+        color:#2D9823 ;
+        margin: 30px auto;
+    }
+
+    .puzzle{
+        display: block;
+        margin: 10px auto;
+    }
+
+    .title3{
+        color: white;
+        background-color: #0A8EAE;
+        width: 13rem;
+        text-align: center;
+        margin: 0 auto;
+        border-radius: 2rem;
+        padding: 5px 0;
+        position: relative;
+        top: 20px;
+    }
+
+    .border{
+        padding: 30px 10px;
+        border: 2px solid #0A8EAE;
+        border-radius: 2rem;
+        background-color: white;
+        margin: 0 20px;
+        
+    }
+    .table{
+        display: grid;
+        grid-template-columns:3fr 7fr ;
+    }
+    .cell1{
+        margin: auto;
+
+    }
+
+    .course{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .course h3{
+        text-align: center;
+    }
+
+    .table2{
+        display: grid;
+        grid-template-rows: repeat(6,1fr);
+        margin: 10px;
+        padding-bottom: 40px;
+    }
+
+    .etc{
+        text-align: end;
+        margin: 0 10px;
+    }
+
+    .cell3{
+        background-color: #DCDCDC;
+        padding: 0 10px;
+        font-weight: 500;
+    }
+    .cell4{
+        background-color: white;
+        padding: 0 10px;
+        margin-top: 1px;
+    }
+
+    .center{
+        text-align: center;
+    }
+
+    .starting-support{
+        background: linear-gradient(0deg, transparent 19px, #B3F0FF 20px), linear-gradient(90deg,  transparent 19px, #B3F0FF 20px);
+        background-size: 20px 20px;
+        padding: 30px 10px;
+        height: 100%;
+    }
+
+    .starting-support img{
+        max-width: 60%;
+        display: block;
+        margin: 20px auto;
+        border-radius: 50%;
+    }
+
+    .point{
+        text-align: center;
+    }
+
+    .point h3{
+        background: linear-gradient(transparent 50%, #FFF641 50%);
+    }
+
+    .point-group{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 0;
+    }
+/* FAQ Section (Mobile) */
 .faq{
     margin: 40px 10px;
 }
@@ -573,17 +589,37 @@ main{
 
 .qa-group{
     margin: 0 auto;
-    max-width: 1100px;
+    max-width: 1100px; /* PC版も考慮したmax-widthだが、モバイルではwidth: 95%が支配的 */
     width: 95%;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.5rem; /* QAブロック間のスペース */
 }
 
-.qu{
+/* 質問部分 (questionとquの組み合わせ) */
+.question {
+    border: 1.5px solid #0A8EAE;
+    border-radius: 0.5rem;
+    background-color: white;
+    position: relative; /* Qと+の擬似要素の基準 */
+    top: 10px; /* QAブロック間のマージンとして機能しているようだが、qa-groupのgapに任せるか、qaにmargin-bottomを持たせる方が自然 */
+    z-index: 2; /* answerよりも手前に */
+    cursor: pointer; /* クリック可能であることを示す */
+    /* .qaの中に.questionと.answerがあるため、.questionのtop: 10px;は
+       qa-groupのgap: 0.5rem;と競合または混乱を招く可能性があります。
+       もしqa-groupのgapで十分なスペースが取れるなら、このtopは削除しても良いかもしれません。
+       今回は既存の挙動に合わせます。
+    */
+}
+
+.qu{ /* .question と同じ要素に適用されているはず */
     margin: 0;
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem; /* Qの内容のパディング */
     text-align: left;
+    font-weight: 500;
+    font-size: 1rem; /* モバイルの文字サイズ */
+    /* position: relative; は .question で定義されているので不要 */
+    /* background-color: white; も .question で定義されているので不要 */
 }
 
 .qu::before{
@@ -591,56 +627,2058 @@ main{
     color: #0A8EAE;
     font-weight: 600;
     font-size: 1rem;
-    position: relative;
-    right: 1rem;
-}
-
-.qu::after{
-    content: '+';
-    color: #0A8EAE;
-    font-weight: 600;
-    font-size: 1rem;
-    position: absolute;
-    right: 1rem;
+    position: absolute; /* .question を基準に絶対配置 */
+    left: 1rem; /* 左からの位置 */
     top: 50%;
     transform: translateY(-50%); /* 中央揃え */
 }
 
-.question{
-    border: 1.5px solid #0A8EAE;
-    border-radius: 0.5rem;
-    background-color: white;
-    position: relative;
-    top: 10px;
+.qu::after{
+    content: '+'; /* 初期アイコン */
+    color: #0A8EAE;
+    font-weight: 600;
+    font-size: 1rem;
+    position: absolute; /* .question を基準に絶対配置 */
+    right: 1rem; /* 右からの位置 */
+    top: 50%;
+    transform: translateY(-50%); /* 中央揃え */
+    transition: transform 0.3s ease; /* アニメーション追加 */
 }
 
-.answer{
-    border: 1.5px solid #0A8EAE;
-    background-color: #E3FAFF;
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
-    border-radius: 0 0 0.5rem 0.5rem;
-    display: none;
+/* 質問が開いた時のスタイル */
+.qu.open {
+    border-bottom: none; /* 開いた時に下の線をなくす */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
+
+.qu.open::after {
+    content: '－'; /* 開いた時のアイコン */
+    transform: translateY(-50%) rotate(0deg); /* 必要であれば回転アニメーションなども */
+}
+
+/* 回答部分 */
+.answer {
+    border: 1.5px solid #0A8EAE; /* 通常のボーダー */
+    border-top: none; /* 上のボーダーは表示しない */
+    background-color: #E3FAFF;
+    border-radius: 0 0 0.5rem 0.5rem;
+    position: relative;
+    top: 10px;
+    z-index: 1;
+    max-height: 0;
+    padding: 0 0.5rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    width: 97%;
+    margin: 0 auto;
+}
+
+/* 回答が開いた時のスタイル */
+.answer.active {
+    max-height: 500px; /* コンテンツが表示される十分な高さを設定 */
+    padding: 1rem 0.5rem 0.5rem 0.5rem; /* 回答が表示された時のパディング */
+    width: 100%;
+}
+
 .an::before{
     content: 'A';
     color: #0A8EAE;
     font-weight: 600;
     font-size: 1rem;
-    position: relative;
-    right: 1rem;
+    position: absolute; /* .answer のパディングと連動して配置 */
+    left: 0.5rem; /* .answer のpadding-leftに合わせて調整 */
+    top: 1rem; /* .answer のpadding-topに合わせて調整 */
 }
 
 .an{
     margin: 0;
-    padding-left: 2rem;
+    padding-left: 2rem; /* Aの内容の左パディング */
     padding-right:2rem;
     text-align: left;
 }
 
-.qu.open::after {
-    content: '－';
-}
+    a.line{
+        text-decoration: none; /* Corrected typo from 'nones' to 'none' */
+    }
 
-a.line{
-    text-decoration: none; /* Corrected typo from 'nones' to 'none' */
+    .footer {
+        background-color: #E3FAFF; /* Match mobile footer background */
+        color: white; /* Match mobile footer text color */
+        padding: 20px 10px; /* PCでのフッターのパディング */
+        text-align: center;
+    }
+    .footer p {
+        margin: 0;
+        font-size: 18px; /* PCでのフッターのフォントサイズ */
+        line-height: 1.5; /* PCでの行間 */
+        color: black;
+        margin-top: 20px;
+    }
+    .footer-links {
+       display: none;
+    }
+    .footer a:hover {
+        text-decoration: underline; /* Underline on hover */
+    }
+    .footer img {
+        max-width: 180px; /* PCでのフッターのロゴサイズ */
+        height: auto;
+        margin: 30px auto; /* Space above the logo */
+        display: block; /* Center the logo */
+    }
+    .copyright {
+        text-align: center;
+        font-size: 12px; /* PCでのフッターの著作権フォントサイズ */
+        color: grey; /* PCでのフッターの著作権の色 */
+        margin: 8px 0; /* Space above and below copyright text */
+    }
+    .contact-button {
+        border: solid 2px #0A8EAE; 
+        border-radius: 20px;
+        padding: 10px 20px;
+        background-color: white;
+        font-size: 13px;
+        color: black;
+        text-decoration: none; 
+    }
+
+    .footer-legal-container {
+        display: flex;
+        gap: 30px; /* Space between legal links */
+        justify-content: center; /* Center align legal links */
+        margin-top: 30px; /* Space above legal links */
+    }
+
+    .footer-legal {
+        font-size: 14px; /* PCでのフッターの法的リンクのフォントサイズ */
+        color: grey; /* PCでのフッターの法的リンクの色 */
+        text-decoration: none; /* No underline for legal links */
+    }
+
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .sm-only {
+        display: block; /* Hide elements with class 'sm-only' on larger screens */
+    }
+    .lg-only {
+        display: none; 
+    }
+
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+    }
+    
+    h1 {
+        font-size: 38px; /* PCでのh1サイズ調整 */
+        margin: 10px;
+        text-align: left; /* PCでのh1は左寄せ */
+        font-weight: 600; /* Match mobile font-weight */
+    }
+    
+    h2 {
+        font-size: 36px; /* PCでのh2サイズ調整 */
+        margin-bottom: 40px;
+        color: #0A8EAE; /* Match mobile h2 color */
+        font-weight: 600; /* Match mobile font-weight */
+        text-align: center; /* Center align for consistency */
+    }
+    
+    h3 {
+        font-size: 28px; /* PCでのh3サイズ調整 */
+        margin-bottom: 30px;
+        font-weight: 600; /* Match mobile font-weight */
+        text-align: center; /* Center align for consistency */
+    }
+    
+    /* --- Header (PC) --- */
+
+    header{
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+        position: fixed; /* Changed to fixed to keep header visible on scroll */
+        width: 100%; /* Ensure it spans full width when fixed */
+        top: 0;
+        left: 0;
+        background-color: white; /* Ensure header has a background */
+        z-index: 100; /* Increased z-index to ensure it's on top */
+    }
+
+    .logo{
+        height: 38px;
+        z-index: 101; /* Ensure logo is above the nav menu */
+    }
+
+    .menu{
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        z-index: 101; /* Ensure hamburger is above the nav menu */
+    }
+
+    .ham{
+        height: 2px;
+        width: 26px;
+        background-color: #0A8EAE;
+        transition: all 0.3s ease;
+    }
+
+    /* Styles for the navigation menu */
+    .nav-menu {
+        position: fixed; /* Changed to fixed to cover content below */
+        top: 60px; /* Position below the fixed header */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 60px); /* Take full viewport height minus header height */
+        background-color: #f8f8f8;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 99; /* Below the header, but above other content */
+        overflow-y: auto; /* Enable scrolling for long menus */
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+    }
+
+    .nav-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-menu li {
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 15px 0;
+        text-decoration: none;
+        color: #0A8EAE;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .nav-menu a:hover {
+        background-color: #e3faff;
+    }
+
+    /* Hamburger menu animation */
+    .menu.open .ham:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
+    }
+
+    .menu.open .ham:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.open .ham:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+    }
+    /* --- Main Content (PC) --- */
+    main {
+        padding-top: 58px; /* PCヘッダーの高さに合わせて調整 */
+        margin: 0 auto; /* 中央揃え */
+    }
+    
+    section {
+        padding: 80px 0; /* Consistent padding for sections */
+    }
+    
+    .top {
+        padding-top: 0; /* Hero section doesn't need top padding */
+        padding-bottom: 0;
+    }
+    
+    .hero {
+        width: 100%;
+        position: relative;
+    }
+
+    .hero_img-sm {
+        display: none; /* Hide mobile image on larger screens */
+    }
+    
+    .hero_img-lg {
+        width: 100%; /* Adjust image width to give space for text */
+        height: auto;
+        display: block;
+    }
+    
+    .top_meg {
+        position: absolute; /* Make it a static flex item */
+        bottom: 20%;
+        right: 2%;
+        background-color: #ffffff80;
+        border-radius: 30px;
+        word-break: break-word;
+        padding: 1em;
+    }
+    
+    .top_meg h1 {
+        font-size: 36px; /* PCでのheroタイトルサイズ */
+        line-height: 1.3;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    
+    .guid {
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 80px;
+    }
+    
+    .guid p {
+        color: #0A8EAE;
+        margin-bottom: 20px; /* Space between text and button */
+        font-size: 22px;
+        font-weight: 400;
+    }
+    
+    .btn {
+        background-color: #FFD000; /* Match mobile button color */
+        width: 40em; /* PCでのボタン幅を広げる */
+        height: 4.5em;
+        border-radius: 2em; /* Match mobile border-radius */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.25); /* Match mobile shadow */
+        transition: background-color 0.3s ease;
+    }
+    
+    .btn a {
+        text-decoration: none;
+        color: black; /* Match mobile text color */
+        font-weight: 600; /* Match mobile font-weight */
+        font-size: 22px;
+    }
+    
+    .btn:hover {
+        background-color: #ffe56f; /* Match mobile hover effect */
+    }
+    
+    .what {
+        margin-top: 40px; /* Consistent section margin */
+        margin-bottom: 40px;
+    }
+    
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4em; /* PCでのタイトルブロックの高さ */
+        margin: 50px auto;
+        gap: 20px; /* Space between logo and h2 */
+    }
+    
+    .what .title img {
+        height: 80px; /* PCでのロゴサイズ */
+    }
+    
+    .what .title h2 {
+        font-size: 42px;
+        margin-bottom: 0; 
+    }
+    
+    .summary {
+        text-align: center;
+        font-size: 32px; /* PCでの要約テキストサイズ */
+        line-height: 0.6em;
+        font-weight: 500;
+        margin: 80px auto;
+    }
+    
+    .under {
+        border-bottom: 3px solid black; /* PC thickness */
+        padding-bottom: 2px;
+    }
+    
+    .illustration {
+        margin-top: 80px;
+        text-align: center;
+    }
+    
+    .illustration img {
+        max-width: 70%; /* PCでのイラストサイズ調整 */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .text {
+        max-width: 60%; /* PCでのテキスト幅 */
+        margin: 40px auto;
+        font-size: 19px;
+        line-height: 1.8;
+        text-align: center; 
+    }
+    
+    .ai {
+        background-color: #E3FAFF; /* Match mobile background */
+        padding: 80px 0; /* Consistent padding */
+        margin-top: 80px; /* Consistent margin */
+        text-align: center;
+    }
+    
+    .ai h2 {
+        font-size: 40px;
+    }
+    
+    .ai .text {
+        max-width: 977px;
+        margin: 40px auto;
+    }
+    
+    .check {
+        margin: 20px auto;
+        text-align: left;
+        max-width: 85%; /* PCでのチェックリストの幅 */
+        font-size: 18px;
+        position: relative;
+        padding-left: 30px; /* Space for custom bullet */
+    }
+    
+    .check::before {
+        content: "";
+        display: inline-block;
+        background-image: url(../img/チェックボックス.png); /* Adjust path if necessary */
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 25px; /* Slightly larger for PC */
+        height: 25px; /* Slightly larger for PC */
+        position: absolute; /* Position absolutely to align with text */
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .anxiety {
+        background-color: white; /* Match mobile background */
+        border-radius: 1em; /* Match mobile border-radius */
+        max-width: 700px; /* PCでの不安要素ボックス幅 */
+        margin: 40px auto; /* Center the block */
+        padding: 3em;
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* 横並びにする */
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.25); /* Match mobile shadow */
+    }
+    
+    .anxiety-title {
+        margin: 0; /* Remove auto margin when it's a flex item */
+        background-color: #636363; /* Match mobile background */
+        width: 600px; 
+        border-radius: 1em; /* Match mobile border-radius */
+        height: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 5px; /* Add padding for content */
+    }
+    
+    .anxiety-title p {
+        color: white;
+        font-size: 22px; /* Adjust font size for PC */
+        font-weight: 500;
+        margin: 0; /* Remove default paragraph margin */
+    }
+
+    .anxiety-example {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; /* PCでの不安イラストと意見リストの間のスペース */
+    }
+    
+    .anxiety img {
+        width: auto; /* PCでの不安イラストサイズ */
+        height: 210px;
+        margin-left: 10%;
+    }
+    .anxiety-example
+    .opinion {
+        flex: 1;
+        text-align: left;
+    }
+    
+    .programing {
+        margin-top: 80px;
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto; /* Center the programming section */
+    }
+    
+    .programing h3 {
+        margin: 0 auto 30px auto; /* Center h3 */
+        border-bottom: 2px solid #FFD000; /* Match mobile border */
+        max-width: 22em; /* PCでの見出し幅 */
+    }
+    
+    .programing span {
+        background-color: #ffe56f; /* Match mobile background */
+        padding: 0 0.2em;
+    }
+    
+    /* Why Choose Us Section (PC) */
+    .reason-group {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 60px; /* アイテム間のスペース */
+        padding: 0 40px;
+        margin: 80px auto; /* Consistent margin */
+        max-width: 900px;
+    }
+    
+    .reason {
+        flex: 0 0 calc(45% - 30px); /* 2列表示 (gapも考慮) */
+        max-width: 700px;
+        padding: 40px;
+        border: 1px solid #eee; /* Subtle border */
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .reason .num {
+        text-align: center; /* Match mobile */
+        color: #FFD000; /* Match mobile */
+        font-weight: 900; /* Match mobile */
+        font-size: 48px; /* PCでの数字サイズ */
+        margin: 15px;
+        width: 100%; /* Ensure it centers */
+    }
+    
+    .reason h3 {
+        text-align: left; /* Align h3 to left within reason box */
+        font-size: 30px; /* PCでの理由見出しサイズ */
+        margin-bottom: 20px;
+    }
+    
+    .reason img {
+        display: block;
+        margin: 30px auto; /* Center image within reason box */
+        max-width: 70%; /* PCでの理由イラストサイズ */
+        height: auto;
+    }
+    
+    .reason .text {
+        max-width: 100%; /* PCでのテキスト幅 */
+        font-size: 18px;
+        text-align: justify;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    
+    .reason a {
+        display: block;
+        text-align: right; /* Match mobile */
+        max-width: 95%; /* Match mobile */
+        color: #0A8EAE; /* Match mobile */
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .line {
+        display: block;
+        text-decoration: none;
+    }
+    
+    .click{
+        background-color: #43C038;
+        padding-top: 5px;
+        position: relative;
+    }
+
+    .click:hover {
+        background-color: #71ca69;
+    }
+
+    .arrow{
+        background-color: white;
+        font-size: 28px;
+        color: #43C038;
+        font-weight: 500;
+        width: 200px;
+        padding-left: 1em;
+        margin-top: 20px;
+    }
+    .white{
+        height: 0;
+    }
+
+    .white::after{
+        display: inline-block;
+        content: "";
+        background-image: url(/img/矢印1.png);
+        height: 100px;
+        width: 130px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        top: -3px;
+        left: 200px;
+    }
+
+    .online-sm {
+        display: none;;
+    }
+
+    .online-lg{
+        color: #FFF641;
+        font-size: 40px;
+        font-weight: 600;
+        top: 0px;
+        right: 27%;
+        margin: 0;
+    }
+
+    .contents{
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 50px;
+        margin-top: 10px;
+    }
+
+    .contents-lg {
+        margin-bottom: 10px;
+    }
+
+    .click_meg p{
+        color: white;
+        font-size: 35px;
+        line-height: 10px;
+        font-weight: 500;
+    }
+
+    .contents img{
+        max-width: 80%;
+        height: 250px;
+        margin-left: 100px;
+    }
+
+    .buttom img{
+        height: 70px;
+    }
+    .buttom{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 60px;
+        box-shadow: 0px 3px 4px 0px rgba(80, 80, 80, 0.35);
+    }
+
+    .btn2{
+        background-color: #2D9823;
+        border-radius: 2em;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .btn2:hover{
+        background-color: #71ca69;
+    }
+
+    .arrow2{
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+    }
+
+    .arrow2 span{
+        color: #FFF641;
+    }
+
+    .arrow2::after{
+        display: inline-block;
+        background-image: url(/img/緑矢印.png);
+        content: "";
+        width: 27px;
+        height: 27px;
+        position: relative;
+        top: 5px;
+        left: 3px;
+        margin: 3px;
+    }
+
+    /* Course Introduction Section (PC) */
+    .course-introduction {
+        background-color: #E3FAFF; /* Match mobile background */
+        padding-top: 100px; /* PCでのタイトル上部パディング */
+        padding-bottom: 80px; /* 下部パディング */
+        text-align: center;
+    }
+    
+    .title2 {
+        font-size: 40px;
+        margin-top: 0;
+        padding-top: 50px;
+        display: flex; /* Use flex to align pseudo-elements with text */
+        align-items: center;
+        justify-content: center;
+        color: #0A8EAE; /* Ensure color is set */
+    }
+    
+    .title2::before,
+    .title2::after {
+        content: '';
+        width: 3rem;
+        height: 0.2rem;
+        background-color: #0A8EAE;
+        display: inline-block;
+        position: static; /* Remove relative positioning to align better in flex */
+        margin: 0 1rem; /* Space between lines and text */
+        transform: none; /* Reset transform */
+    }
+    
+    
+    .green {
+        text-align: center;
+        color: #2D9823; /* Match mobile color */
+        font-size: 20px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .puzzle {
+        display: block;
+        margin: 40px auto; /* Adjust margin for PC */
+        max-width: 350px; /* PCでのパズル画像サイズ */
+        height: auto;
+    }
+    
+    .course-introduction .text {
+        max-width: 700px; /* PCでのテキスト幅 */
+        margin: 40px auto;
+        text-align: center;
+    }
+    
+    .possible {
+        margin: 80px 0;
+    }
+    
+    .title3 {
+        color: white;
+        background-color: #0A8EAE; /* Match mobile background */
+        width: 20rem; /* PCでのタイトル3の幅 */
+        text-align: center;
+        margin: 0 auto;
+        border-radius: 2rem; /* Match mobile border-radius */
+        padding: 12px 0; /* Adjust padding for PC */
+        position: relative;
+        top: 20px; /* Keep consistent with mobile for visual break */
+        z-index: 1; /* Ensure it overlaps border properly */
+    }
+    
+    .border {
+        padding: 60px 40px;
+        border: 2px solid #0A8EAE; /* Match mobile border */
+        border-radius: 2rem; /* Match mobile border-radius */
+        background-color: white;
+        width: 70%;
+        max-width: 700px; /* PCでのボーダーの最大幅 */
+        margin: 0 auto; /* PCでのサイドマージン */
+        position: relative;
+        top: -20px; /* Pull up to overlap with title3 */
+        padding-top: 80px; /* Adjust padding to make space for overlapping title */
+    }
+    
+
+    .table {
+        display: grid;
+        grid-template-columns: 20% 60%; 
+        gap: 30px;
+        align-items: center;
+        text-align: left;
+        margin: 30px 0 30px 10%;
+    }
+    
+    .cell1 {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cell1 img {
+        max-width: 100px; /* PCでのセル内画像サイズ */
+        height: auto;
+    }
+    
+    .cell2 p {
+        font-size: 20px; /* PCでのテキストサイズ */
+        margin: 0;
+    }
+    
+    .course {
+        padding-top: 60px; /* Adjust padding */
+        padding-bottom: 60px;
+    }
+    
+    .course h3 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .table2 {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* PCでのグリッド比率 */
+        max-width: 700px; /* 表の最大幅 */
+        margin: 30px auto;
+        padding-bottom: 0;
+        border: 1px solid #ddd; /* Add a subtle border */
+        border-radius: 8px; /* Match mobile for a softer look */
+        overflow: hidden; /* Ensures border-radius applies to cells */
+    }
+    
+    .cell3 {
+        background-color: #DCDCDC; /* Match mobile background */
+        padding: 20px 25px; /* PCでのセルのパディング */
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd; /* Separator for rows */
+    }
+    
+    .cell4 {
+        background-color: white; /* Match mobile background */
+        padding: 20px 25px; /* PCでのセルのパディング */
+        font-size: 18px;
+        margin-top: 0; /* Remove extra margin */
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd; /* Separator for rows */
+    }
+    
+    .table2 .cell3:last-child,
+    .table2 .cell4:last-child {
+        border-bottom: none; /* No border for the last row */
+    }
+    
+    
+    .etc {
+        font-size: 20px;
+        text-align: end;
+        padding-right: 10%;
+    }
+    
+    .center {
+        text-align: center;
+    }
+    
+    /* Starting Support Section (PC) */
+    .starting-support {
+        background: linear-gradient(0deg, transparent 19px, #B3F0FF 20px), linear-gradient(90deg, transparent 19px, #B3F0FF 20px); /* Match mobile background */
+        background-size: 20px 20px; /* Match mobile background size */
+        padding: 80px 60px; /* PCでのパディング */
+        text-align: center;
+    }
+    
+    .starting-support h2 {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+    
+    .starting-support img {
+        max-width: 350px; /* PCでのイメージ画像サイズ */
+        height: auto;
+        margin: 50px auto;
+        display: block;
+        border-radius: 50%; /* Match mobile for round image */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Add shadow */
+    }
+    
+    .point-group {
+        display: flex;
+        flex-direction: column; /* 横並びにする */
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 60px;
+        padding: 30px 0;
+    }
+    
+    .point {
+        flex: 0 0 calc(30% - 40px); /* 3列表示 (gapも考慮) */
+        max-width: 600px;
+        padding: 30px;
+        text-align: center; /* Center align text inside points */
+        background-color: white; /* Add background for clarity */
+        border-radius: 15px; /* Consistent border radius */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Add shadow */
+    }
+    
+    .point h3 {
+        font-size: 26px;
+        margin-bottom: 20px;
+        background: linear-gradient(transparent 50%, #FFF641 50%); /* Match mobile highlight */
+        display: inline-block; /* Apply background only to text width */
+        padding: 0 5px; /* Small padding for highlight */
+        text-align: center; /* Keep text centered within the highlighted area */
+    }
+    
+    .point p {
+        font-size: 18px;
+        line-height: 1.8;
+        text-align: justify; /* Justify for PC readability */
+    }
+    
+    /* FAQ Section (PC) */
+    .faq {
+        margin: 80px auto;
+        max-width: 700px; /* PCでのFAQセクションの最大幅 */
+        text-align: center;
+    }
+    
+    .faq h2 {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+    
+    .qa-group {
+        margin: 0 auto;
+        width: 100%; /* Take full width of max-width container */
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; /* PCでのFAQ間のスペース */
+        text-align: left;
+    }
+    
+    .qa {
+        border: 1.5px solid #0A8EAE; /* Match mobile border */
+        border-radius: 0.5rem; /* Match mobile border-radius */
+        background-color: white;
+        position: relative; /* For question positioning */
+        margin-bottom: 10px; /* Space between Q&A blocks */
+    }
+    
+    .qu {
+        margin: 0;
+        padding: 1.2rem 4rem; /* PCでのQのパディング */
+        text-align: left;
+        background-color: white; /* Ensure background is white */
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 20px; /* Match PC font-size */
+        position: relative;
+        z-index: 2; /* Ensure it's above answer when active */
+    }
+    
+    .qu::before {
+        content: 'Q'; /* Match mobile content */
+        color: #0A8EAE;
+        font-weight: 600;
+        font-size: 1.5rem; /* PC size for Q */
+        position: absolute;
+        left: 1.5rem; /* Consistent left positioning */
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .qu::after {
+        content: '+'; /* Match mobile content */
+        color: #0A8EAE;
+        font-weight: 600;
+        font-size: 1.5rem; /* PC size for + */
+        position: absolute;
+        right: 2rem; /* Consistent right positioning */
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease;
+    }
+    
+    .qu.open {
+        border-bottom: none; /* Remove border when open */
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    .qu.open::after {
+        content: '－'; /* Match mobile content */
+    }
+    
+    .answer {
+        border-top: none; /* Remove top border as it's part of the parent border */
+        background-color: #E3FAFF; /* Match mobile background */
+        padding: 0 1.5rem; /* Initial padding for smooth transition */
+        border-radius: 0 0 0.5rem 0.5rem; /* Match mobile border-radius */
+        max-height: 0; /* Initially hidden */
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        border: 1.5px solid #0A8EAE; /* Add border for consistency when open */
+        border-top: none; /* Ensure no double border with qu */
+        position: relative; /* To align with qu's position */
+        z-index: 1; /* Below the question */
+    }
+    
+    .answer.active {
+        max-height: 500px; /* Sufficient height for content */
+        padding: 2rem 1.5rem 1.5rem 1.5rem; /* PCでのAのパディング */
+    }
+    
+    .an {
+        margin: 0;
+        padding-left: 2.5rem; /* PCでのAの左パディング */
+        padding-right: 1.5rem;
+        text-align: left;
+        font-size: 18px; /* PC font-size */
+        position: relative;
+    }
+    
+    .an::before {
+        content: 'A'; /* Match mobile content */
+        color: #0A8EAE; /* Match mobile color */
+        font-weight: 600;
+        font-size: 1.5rem; /* PC size for A */
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    a.line {
+        text-decoration: none;
+    }
+
+    .footer {
+        background-color: #E3FAFF; /* Match mobile footer background */
+        color: white; /* Match mobile footer text color */
+        padding: 40px 20px; /* PCでのフッターのパディング */
+        text-align: center;
+    }
+    .footer p {
+        margin: 0;
+        font-size: 20px; /* PCでのフッターのフォントサイズ */
+        line-height: 1.5; /* PCでの行間 */
+        color: black;
+    }
+    .footer-links {
+        display: none;
+    }
+    .footer a:hover {
+        text-decoration: underline; /* Underline on hover */
+    }
+    .footer img {
+        max-width: 250px; /* PCでのフッターのロゴサイズ */
+        height: auto;
+        margin: 40px; /* Space above the logo */
+        display: block; /* Center the logo */
+        margin-left: auto;
+        margin-right: auto; /* Center the logo */
+    }
+
+    .contact-button {
+        border: solid 2px #0A8EAE; 
+        border-radius: 30px;
+        padding: 10px 20px;
+        background-color: white;
+        font-size: 20px;
+        color: black;
+        text-decoration: none; 
+    }
+
+    .footer-legal-container {
+        display: flex;
+        gap: 30px; /* Space between legal links */
+        justify-content: center; /* Center align legal links */
+        margin-top: 50px; /* Space above legal links */
+    }
+
+    .footer-legal {
+        font-size: 14px; /* PCでのフッターの法的リンクのフォントサイズ */
+        color: grey; /* PCでのフッターの法的リンクの色 */
+        text-decoration: none; /* No underline for legal links */
+    }
+
+    .copyright {
+        text-align: center;
+    }
+} 
+@media screen and (min-width: 1025px) {
+
+    .sm-only {
+        display: none; /* Hide elements with class 'sm-only' on larger screens */
+    }
+    .lg-only {
+        display: block; 
+    }
+
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+    }
+    
+    h1 {
+        font-size: 38px; /* PCでのh1サイズ調整 */
+        margin: 10px;
+        text-align: left; /* PCでのh1は左寄せ */
+        font-weight: 600; /* Match mobile font-weight */
+    }
+    
+    h2 {
+        font-size: 42px; /* PCでのh2サイズ調整 */
+        margin-bottom: 40px;
+        color: #0A8EAE; /* Match mobile h2 color */
+        font-weight: 600; /* Match mobile font-weight */
+        text-align: center; /* Center align for consistency */
+    }
+    
+    h3 {
+        font-size: 28px; /* PCでのh3サイズ調整 */
+        margin-bottom: 30px;
+        font-weight: 600; /* Match mobile font-weight */
+        text-align: center; /* Center align for consistency */
+    }
+    
+    /* --- Header (PC) --- */
+    header {
+        height: 100px; /* PCヘッダーの高さ */
+        padding: 0 60px; /* PCヘッダーのパディング */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.25); /* Match mobile shadow */
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: white;
+        z-index: 1000;
+    }
+    
+    .logo {
+        height: 60px; /* PCロゴサイズ */
+        z-index: 1001;
+    }
+    
+    .menu {
+        display: none; /* ハンバーガーメニューを非表示 */
+    }
+    
+    .nav-menu {
+        position: static; /* 固定解除 */
+        transform: translateY(0); /* 表示状態にする */
+        height: auto; /* 高さの制限を解除 */
+        width: auto; /* 幅の制限を解除 */
+        background-color: transparent; /* 背景色を透明に */
+        box-shadow: none; /* 影を非表示 */
+        z-index: auto; /* z-indexをリセット */
+        overflow-y: visible; /* スクロール解除 */
+    }
+    
+    .nav-menu ul {
+        display: flex; /* ナビゲーションを横並びに */
+        gap: 40px; /* 各メニュー間のスペース */
+        list-style: none; /* Remove bullet points */
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-menu li {
+        border-bottom: none; /* 下線を非表示 */
+    }
+    
+    .nav-menu a {
+        padding: 0; /* パディングをリセット */
+        color: #0A8EAE; /* PCでのリンク色 */
+        font-weight: 500;
+        font-size: 18px;
+        position: relative; /* 下線アニメーション用 */
+        text-decoration: none; /* Remove default underline */
+    }
+    
+    .nav-menu a::after { /* ホバー時の下線アニメーション */
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        display: block;
+        margin-top: 5px;
+        left: 0;
+        background: #0A8EAE;
+        transition: width .3s ease-in-out;
+    }
+    
+    .nav-menu a:hover::after {
+        width: 100%;
+        left: 0;
+    }
+    
+    /* --- Main Content (PC) --- */
+    main {
+        padding-top: 100px; /* PCヘッダーの高さに合わせて調整 */
+        margin: 0 auto; /* 中央揃え */
+    }
+    
+    .top {
+        padding-top: 0; /* Hero section doesn't need top padding */
+        padding-bottom: 0;
+    }
+    
+    .hero {
+        width: 100%;
+        position: relative;
+    }
+
+    .hero_img-sm {
+        display: none; /* Hide mobile image on larger screens */
+    }
+    
+    .hero_img-lg {
+        width: 100%; /* Adjust image width to give space for text */
+        height: auto;
+        display: block;
+    }
+    
+    .top_meg {
+        position: absolute; /* Make it a static flex item */
+        bottom: 20%;
+        right: 2%;
+        background-color: #ffffff80;
+        border-radius: 30px;
+        word-break: break-word;
+        padding: 1em;
+    }
+    
+    .top_meg h1 {
+        font-size: 48px; /* PCでのheroタイトルサイズ */
+        line-height: 1.3;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    .guid {
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 80px;
+    }
+    
+    .guid p {
+        color: #0A8EAE;
+        margin-bottom: 20px; /* Space between text and button */
+        font-size: 22px;
+        font-weight: 400;
+    }
+    
+    .btn {
+        background-color: #FFD000; /* Match mobile button color */
+        width: 60em; /* PCでのボタン幅を広げる */
+        height: 4.5em;
+        border-radius: 2em; /* Match mobile border-radius */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.25); /* Match mobile shadow */
+        transition: background-color 0.3s ease;
+    }
+    
+    .btn a {
+        text-decoration: none;
+        color: black; /* Match mobile text color */
+        font-weight: 600; /* Match mobile font-weight */
+        font-size: 22px;
+    }
+    
+    .btn:hover {
+        background-color: #ffe56f; /* Match mobile hover effect */
+    }
+    
+    .what {
+        margin-top: 40px; /* Consistent section margin */
+        margin-bottom: 40px;
+    }
+    
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4em; /* PCでのタイトルブロックの高さ */
+        margin: 50px auto;
+        gap: 20px; /* Space between logo and h2 */
+    }
+    
+    .what .title img {
+        height: 80px; /* PCでのロゴサイズ */
+    }
+    
+    .what .title h2 {
+        font-size: 42px;
+        margin-bottom: 0; 
+    }
+    
+    .summary {
+        text-align: center;
+        font-size: 32px; /* PCでの要約テキストサイズ */
+        line-height: 0.6em;
+        font-weight: 500;
+        margin: 80px auto;
+    }
+    
+    .under {
+        border-bottom: 3px solid black; /* PC thickness */
+        padding-bottom: 2px;
+    }
+    
+    .illustration {
+        margin-top: 80px;
+        text-align: center;
+    }
+    
+    .illustration img {
+        max-width: 70%; /* PCでのイラストサイズ調整 */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .text {
+        max-width: 60%; /* PCでのテキスト幅 */
+        margin: 40px auto;
+        font-size: 19px;
+        line-height: 1.8;
+        text-align: center; 
+    }
+    
+    .ai {
+        background-color: #E3FAFF; /* Match mobile background */
+        padding: 80px 0; /* Consistent padding */
+        margin-top: 80px; /* Consistent margin */
+        text-align: center;
+    }
+    
+    .ai h2 {
+        font-size: 42px;
+    }
+    
+    .ai .text {
+        max-width: 977px;
+        margin: 40px auto;
+    }
+    
+    .check {
+        margin: 20px auto;
+        text-align: left;
+        max-width: 85%; /* PCでのチェックリストの幅 */
+        font-size: 18px;
+        position: relative;
+        padding-left: 30px; /* Space for custom bullet */
+    }
+    
+    .check::before {
+        content: "";
+        display: inline-block;
+        background-image: url(../img/チェックボックス.png); /* Adjust path if necessary */
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 25px; /* Slightly larger for PC */
+        height: 25px; /* Slightly larger for PC */
+        position: absolute; /* Position absolutely to align with text */
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .anxiety {
+        background-color: white; /* Match mobile background */
+        border-radius: 1em; /* Match mobile border-radius */
+        max-width: 1200px; /* PCでの不安要素ボックス幅 */
+        margin: 40px auto; /* Center the block */
+        padding: 3em;
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* 横並びにする */
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.25); /* Match mobile shadow */
+    }
+    
+    .anxiety-title {
+        margin: 0; /* Remove auto margin when it's a flex item */
+        background-color: #636363; /* Match mobile background */
+        width: 800px; 
+        border-radius: 1em; /* Match mobile border-radius */
+        height: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 5px; /* Add padding for content */
+    }
+    
+    .anxiety-title p {
+        color: white;
+        font-size: 22px; /* Adjust font size for PC */
+        font-weight: 500;
+        margin: 0; /* Remove default paragraph margin */
+    }
+
+    .anxiety-example {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; /* PCでの不安イラストと意見リストの間のスペース */
+    }
+    
+    .anxiety img {
+        width: auto; /* PCでの不安イラストサイズ */
+        height: 210px;
+        margin-left: 10%;
+    }
+    .anxiety-example
+    .opinion {
+        flex: 1;
+        text-align: left;
+    }
+    
+    .programing {
+        margin-top: 80px;
+        text-align: center;
+    }
+    
+    .programing h3 {
+        margin: 0 auto 30px auto; /* Center h3 */
+        border-bottom: 2px solid #FFD000; /* Match mobile border */
+        max-width: 22em; /* PCでの見出し幅 */
+    }
+    
+    .programing span {
+        background-color: #ffe56f; /* Match mobile background */
+        padding: 0 0.2em;
+    }
+    
+    /* Why Choose Us Section (PC) */
+    .reason-group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px; /* アイテム間のスペース */
+        padding: 0 40px;
+        margin: 80px auto; /* Consistent margin */
+        max-width: 1500px;
+    }
+    
+    .reason {
+        flex: 0 0 calc(45% - 30px); /* 2列表示 (gapも考慮) */
+        max-width: 500px;
+        padding: 40px;
+        border: 1px solid #eee; /* Subtle border */
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .reason .num {
+        text-align: center; /* Match mobile */
+        color: #FFD000; /* Match mobile */
+        font-weight: 900; /* Match mobile */
+        font-size: 48px; /* PCでの数字サイズ */
+        margin: 15px;
+        width: 100%; /* Ensure it centers */
+    }
+    
+    .reason h3 {
+        text-align: left; /* Align h3 to left within reason box */
+        font-size: 30px; /* PCでの理由見出しサイズ */
+        margin-bottom: 20px;
+    }
+    
+    .reason img {
+        display: block;
+        margin: 30px auto; /* Center image within reason box */
+        max-width: 70%; /* PCでの理由イラストサイズ */
+        height: auto;
+    }
+    
+    .reason .text {
+        max-width: 100%; /* PCでのテキスト幅 */
+        font-size: 18px;
+        text-align: justify;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    
+    .reason a {
+        display: block;
+        text-align: right; /* Match mobile */
+        max-width: 95%; /* Match mobile */
+        color: #0A8EAE; /* Match mobile */
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .line {
+        display: block;
+        text-decoration: none;
+    }
+    
+    .click{
+        background-color: #43C038;
+        padding-top: 5px;
+        position: relative;
+    }
+
+    .click:hover {
+        background-color: #71ca69;
+    }
+
+    .arrow{
+        background-color: white;
+        font-size: 28px;
+        color: #43C038;
+        font-weight: 500;
+        width: 200px;
+        padding-left: 1em;
+        margin-top: 20px;
+    }
+    .white{
+        height: 0;
+    }
+
+    .white::after{
+        display: inline-block;
+        content: "";
+        background-image: url(/img/矢印1.png);
+        height: 100px;
+        width: 130px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        top: -3px;
+        left: 200px;
+    }
+
+    .online-sm {
+        display: none;;
+    }
+
+    .online-lg{
+        color: #FFF641;
+        font-size: 45px;
+        font-weight: 600;
+        top: 0px;
+        right: 27%;
+        margin: 0;
+    }
+
+    .contents{
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 150px;
+        margin-top: 10px;
+    }
+
+    .contents-lg {
+        margin-bottom: 10px;
+    }
+
+    .click_meg p{
+        color: white;
+        font-size: 35px;
+        line-height: 10px;
+        font-weight: 500;
+    }
+
+    .contents img{
+        max-width: 80%;
+        height: 250px;
+        margin-left: 100px;
+    }
+
+    .buttom img{
+        height: 70px;
+    }
+    .buttom{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 60px;
+        box-shadow: 0px 3px 4px 0px rgba(80, 80, 80, 0.35);
+    }
+
+    .btn2{
+        background-color: #2D9823;
+        border-radius: 2em;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .btn2:hover{
+        background-color: #71ca69;
+    }
+
+    .arrow2{
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+    }
+
+    .arrow2 span{
+        color: #FFF641;
+    }
+
+    .arrow2::after{
+        display: inline-block;
+        background-image: url(/img/緑矢印.png);
+        content: "";
+        width: 27px;
+        height: 27px;
+        position: relative;
+        top: 5px;
+        left: 3px;
+        margin: 3px;
+    }
+
+    /* Course Introduction Section (PC) */
+    .course-introduction {
+        background-color: #E3FAFF; /* Match mobile background */
+        padding-top: 100px; /* PCでのタイトル上部パディング */
+        padding-bottom: 80px; /* 下部パディング */
+        text-align: center;
+    }
+    
+    .title2 {
+        font-size: 40px;
+        margin-top: 0;
+        padding-top: 50px;
+        display: flex; /* Use flex to align pseudo-elements with text */
+        align-items: center;
+        justify-content: center;
+        color: #0A8EAE; /* Ensure color is set */
+    }
+    
+    .title2::before,
+    .title2::after {
+        content: '';
+        width: 3rem;
+        height: 0.2rem;
+        background-color: #0A8EAE;
+        display: inline-block;
+        position: static; /* Remove relative positioning to align better in flex */
+        margin: 0 1rem; /* Space between lines and text */
+        transform: none; /* Reset transform */
+    }
+    
+    
+    .green {
+        text-align: center;
+        color: #2D9823; /* Match mobile color */
+        font-size: 20px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .puzzle {
+        display: block;
+        margin: 40px auto; /* Adjust margin for PC */
+        max-width: 350px; /* PCでのパズル画像サイズ */
+        height: auto;
+    }
+    
+    .course-introduction .text {
+        max-width: 900px; /* PCでのテキスト幅 */
+        margin: 40px auto;
+        text-align: center;
+    }
+    
+    .possible {
+        margin: 80px 0;
+    }
+    
+    .title3 {
+        color: white;
+        background-color: #0A8EAE; /* Match mobile background */
+        width: 20rem; /* PCでのタイトル3の幅 */
+        text-align: center;
+        margin: 0 auto;
+        border-radius: 2rem; /* Match mobile border-radius */
+        padding: 12px 0; /* Adjust padding for PC */
+        position: relative;
+        top: 20px; /* Keep consistent with mobile for visual break */
+        z-index: 1; /* Ensure it overlaps border properly */
+    }
+    
+    .border {
+        padding: 60px 40px;
+        border: 2px solid #0A8EAE; /* Match mobile border */
+        border-radius: 2rem; /* Match mobile border-radius */
+        background-color: white;
+        width: 70%;
+        max-width: 900px; /* PCでのボーダーの最大幅 */
+        margin: 0 auto; /* PCでのサイドマージン */
+        position: relative;
+        top: -20px; /* Pull up to overlap with title3 */
+        padding-top: 80px; /* Adjust padding to make space for overlapping title */
+    }
+    
+
+    .table {
+        display: grid;
+        grid-template-columns: 20% 60%; 
+        gap: 30px;
+        align-items: center;
+        text-align: left;
+        margin: 30px 0 30px 10%;
+    }
+    
+    .cell1 {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cell1 img {
+        max-width: 100px; /* PCでのセル内画像サイズ */
+        height: auto;
+    }
+    
+    .cell2 p {
+        font-size: 20px; /* PCでのテキストサイズ */
+        margin: 0;
+    }
+    
+    .course {
+        padding-top: 60px; /* Adjust padding */
+        padding-bottom: 60px;
+    }
+    
+    .course h3 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .table2 {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* PCでのグリッド比率 */
+        max-width: 1000px; /* 表の最大幅 */
+        margin: 30px auto;
+        padding-bottom: 0;
+        border: 1px solid #ddd; /* Add a subtle border */
+        border-radius: 8px; /* Match mobile for a softer look */
+        overflow: hidden; /* Ensures border-radius applies to cells */
+    }
+    
+    .cell3 {
+        background-color: #DCDCDC; /* Match mobile background */
+        padding: 20px 25px; /* PCでのセルのパディング */
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd; /* Separator for rows */
+    }
+    
+    .cell4 {
+        background-color: white; /* Match mobile background */
+        padding: 20px 25px; /* PCでのセルのパディング */
+        font-size: 18px;
+        margin-top: 0; /* Remove extra margin */
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd; /* Separator for rows */
+    }
+    
+    .table2 .cell3:last-child,
+    .table2 .cell4:last-child {
+        border-bottom: none; /* No border for the last row */
+    }
+    
+    
+    .etc {
+        font-size: 20px;
+        text-align: end;
+        padding-right: 10%;
+    }
+    
+    .center {
+        text-align: center;
+    }
+    
+    /* Starting Support Section (PC) */
+    .starting-support {
+        background: linear-gradient(0deg, transparent 19px, #B3F0FF 20px), linear-gradient(90deg, transparent 19px, #B3F0FF 20px); /* Match mobile background */
+        background-size: 20px 20px; /* Match mobile background size */
+        padding: 80px 60px; /* PCでのパディング */
+        text-align: center;
+    }
+    
+    .starting-support h2 {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+    
+    .starting-support img {
+        max-width: 350px; /* PCでのイメージ画像サイズ */
+        height: auto;
+        margin: 50px auto;
+        display: block;
+        border-radius: 50%; /* Match mobile for round image */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Add shadow */
+    }
+    
+    .point-group {
+        display: flex;
+        flex-direction: row; /* 横並びにする */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px;
+        padding: 30px 0;
+    }
+    
+    .point {
+        flex: 0 0 calc(30% - 40px); /* 3列表示 (gapも考慮) */
+        max-width: 400px;
+        padding: 30px;
+        text-align: center; /* Center align text inside points */
+        background-color: white; /* Add background for clarity */
+        border-radius: 15px; /* Consistent border radius */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Add shadow */
+    }
+    
+    .point h3 {
+        font-size: 26px;
+        margin-bottom: 20px;
+        background: linear-gradient(transparent 50%, #FFF641 50%); /* Match mobile highlight */
+        display: inline-block; /* Apply background only to text width */
+        padding: 0 5px; /* Small padding for highlight */
+        text-align: center; /* Keep text centered within the highlighted area */
+    }
+    
+    .point p {
+        font-size: 18px;
+        line-height: 1.8;
+        text-align: justify; /* Justify for PC readability */
+    }
+    
+    /* FAQ Section (PC) */
+    .faq {
+        margin: 80px auto;
+        max-width: 1000px; /* PCでのFAQセクションの最大幅 */
+        text-align: center;
+    }
+    
+    .faq h2 {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+    
+    .qa-group {
+        margin: 0 auto;
+        width: 100%; /* Take full width of max-width container */
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; /* PCでのFAQ間のスペース */
+        text-align: left;
+    }
+    
+    .qa {
+        border: 1.5px solid #0A8EAE; /* Match mobile border */
+        border-radius: 0.5rem; /* Match mobile border-radius */
+        background-color: white;
+        position: relative; /* For question positioning */
+        margin-bottom: 10px; /* Space between Q&A blocks */
+    }
+    
+    .qu {
+        margin: 0;
+        padding: 1.2rem 4rem; /* PCでのQのパディング */
+        text-align: left;
+        background-color: white; /* Ensure background is white */
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 20px; /* Match PC font-size */
+        position: relative;
+        z-index: 2; /* Ensure it's above answer when active */
+    }
+    
+    .qu::before {
+        content: 'Q'; /* Match mobile content */
+        color: #0A8EAE;
+        font-weight: 600;
+        font-size: 1.5rem; /* PC size for Q */
+        position: absolute;
+        left: 1.5rem; /* Consistent left positioning */
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .qu::after {
+        content: '+'; /* Match mobile content */
+        color: #0A8EAE;
+        font-weight: 600;
+        font-size: 1.5rem; /* PC size for + */
+        position: absolute;
+        right: 2rem; /* Consistent right positioning */
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease;
+    }
+    
+    .qu.open {
+        border-bottom: none; /* Remove border when open */
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    .qu.open::after {
+        content: '－'; /* Match mobile content */
+    }
+    
+    .answer {
+        border-top: none; /* Remove top border as it's part of the parent border */
+        background-color: #E3FAFF; /* Match mobile background */
+        padding: 0 1.5rem; /* Initial padding for smooth transition */
+        border-radius: 0 0 0.5rem 0.5rem; /* Match mobile border-radius */
+        max-height: 0; /* Initially hidden */
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        border: 1.5px solid #0A8EAE; /* Add border for consistency when open */
+        border-top: none; /* Ensure no double border with qu */
+        position: relative; /* To align with qu's position */
+        z-index: 1; /* Below the question */
+    }
+    
+    .answer.active {
+        max-height: 500px; /* Sufficient height for content */
+        padding: 2rem 1.5rem 1.5rem 1.5rem; /* PCでのAのパディング */
+    }
+    
+    .an {
+        margin: 0;
+        padding-left: 2.5rem; /* PCでのAの左パディング */
+        padding-right: 1.5rem;
+        text-align: left;
+        font-size: 18px; /* PC font-size */
+        position: relative;
+    }
+    
+    .an::before {
+        content: 'A'; /* Match mobile content */
+        color: #0A8EAE; /* Match mobile color */
+        font-weight: 600;
+        font-size: 1.5rem; /* PC size for A */
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    a.line {
+        text-decoration: none;
+    }
+
+    .footer {
+        background-color: #E3FAFF; /* Match mobile footer background */
+        color: white; /* Match mobile footer text color */
+        padding: 40px 20px; /* PCでのフッターのパディング */
+        text-align: center;
+    }
+    .footer p {
+        margin: 0;
+        font-size: 20px; /* PCでのフッターのフォントサイズ */
+        line-height: 1.5; /* PCでの行間 */
+        color: black;
+    }
+    .footer-links {
+        margin: 40px; /* Space between text and links */
+        display: flex;
+        justify-content: center;
+        gap: 30px; /* Space between links */
+    }
+    .footer-links a {
+        color: #0A8EAE; /* Match mobile footer link color */
+        text-decoration: none; /* Remove underline */
+        font-size: 20px;
+    }
+    .footer a:hover {
+        text-decoration: underline; /* Underline on hover */
+    }
+    .footer img {
+        max-width: 250px; /* PCでのフッターのロゴサイズ */
+        height: auto;
+        margin-top: 20px; /* Space above the logo */
+        display: block; /* Center the logo */
+        margin-left: auto;
+        margin-right: auto; /* Center the logo */
+    }
+
+    .contact-button {
+        border: solid 2px #0A8EAE; 
+        border-radius: 30px;
+        padding: 10px 20px;
+        background-color: white;
+        font-size: 20px;
+        color: black;
+        text-decoration: none; 
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+    }
+
+    .contact-button:hover {
+        background-color: #0A8EAE; /* Change background on hover */
+        color: white; /* Change text color on hover */
+    }
+
+    .footer-legal-container {
+        display: flex;
+        gap: 30px; /* Space between legal links */
+        justify-content: center; /* Center align legal links */
+        margin-top: 50px; /* Space above legal links */
+    }
+
+    .footer-legal {
+        font-size: 14px; /* PCでのフッターの法的リンクのフォントサイズ */
+        color: grey; /* PCでのフッターの法的リンクの色 */
+        text-decoration: none; /* No underline for legal links */
+    }
+
+    .copyright {
+        text-align: center;
+    }
+} 
+    
