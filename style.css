@@ -2492,16 +2492,15 @@
     .point-group {
         display: flex;
         flex-direction: row; /* 横並びにする */
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 60px;
+        gap: 50px;
         padding: 50px 0;
     }
     
     .point {
-        flex: 0 0 calc(30% - 40px); /* 3列表示 (gapも考慮) */
+        flex: 0 0 calc(33.33% - 30px); /* 3列表示 (gapも考慮) */
         max-width: 400px;
-        padding: 30px;
+        padding: 25px;
         text-align: center; /* Center align text inside points */
         background-color: white; /* Add background for clarity */
         border-radius: 15px; /* Consistent border radius */
@@ -2509,18 +2508,19 @@
     }
     
     .point h3 {
-        font-size: 26px;
+        font-size: 22px;
         margin-bottom: 20px;
         background: linear-gradient(transparent 50%, #FFF641 50%); /* Match mobile highlight */
-        display: inline-block; /* Apply background only to text width */
-        padding: 0 5px; /* Small padding for highlight */
-        text-align: center; /* Keep text centered within the highlighted area */
+        display: inline; /* もしくは inline-block でも可。inlineの方が各行に適用されやすい */
+        box-decoration-break: clone; /* これを追加 */
+        text-align: center;
     }
     
     .point p {
         font-size: 18px;
         line-height: 1.8;
         text-align: justify; /* Justify for PC readability */
+        padding: 10px;
     }
     
     /* FAQ Section (PC) */
