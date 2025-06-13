@@ -553,6 +553,11 @@
         margin-top: 1px;
     }
 
+    .cell4 span{
+        color: #e80000;
+        font-weight: 600;
+    }
+
     .center{
         text-align: center;
     }
@@ -1510,6 +1515,11 @@
         display: flex;
         align-items: center;
         border-bottom: 1px solid #ddd; /* Separator for rows */
+    }
+
+    .cell4 span{
+        color: #e80000;
+        font-weight: 600;
     }
     
     .table2 .cell3:last-child,
@@ -2476,6 +2486,11 @@
         display: flex;
         align-items: center;
         border-bottom: 1px solid #ddd; /* Separator for rows */
+    }
+
+    .cell4 span{
+        color: #e80000;
+        font-weight: 600;
     }
     
     .table2 .cell3:last-child,
